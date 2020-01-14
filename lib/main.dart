@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './screens/take_pic_screen.dart';
+import './screens/tabs_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Camera & Gallery Tutorial',
         theme: ThemeData(
-          primarySwatch: Colors.lightBlue,
+          primarySwatch: Theme.of(context).primaryColor,
           accentColor: Colors.teal,
           fontFamily: 'Lato',
           textTheme: ThemeData.light().textTheme.copyWith(
@@ -22,7 +23,9 @@ class MyApp extends StatelessWidget {
               ),
         ),
         routes: {
-          '/': (ctx) => TakePicScreen(),
+          '/': (ctx) =>  TabsScreen(),
+
+          TakePicScreen.routeName: (ctx) => TakePicScreen(),
         },
       ),
     );
