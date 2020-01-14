@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 import '../models/picture.dart';
-import 'dart:io';
 
 class Pictures with ChangeNotifier{
 List<Picture> _items = [];
